@@ -1,0 +1,217 @@
+<html><head><base href="https://example.com/"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>SITE AQUI - Seu Site, Seu Sucesso!</title><style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+  :root {
+    --main-color: #00f0ff;
+    --secondary-color: #0080ff;
+    --text-color: #ffffff;
+    --bg-color: #001a33;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--main-color);
+    text-shadow: 0 0 10px var(--main-color);
+  }
+
+  nav {
+    margin-top: 1rem;
+  }
+
+  nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .client-ticker {
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    animation: pulse 1s infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+  .site-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .site-card {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .site-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .site-card h3 {
+    margin-top: 1rem;
+  }
+
+  .best-seller {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  footer {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+</style></head><body>
+  <header>
+    <div class="client-ticker" id="clientTicker"></div>
+    <div class="logo">SITE AQUI</div>
+    <nav>
+      <a onclick="toggleSection('sobre')">Sobre Nós</a>
+      <a onclick="toggleSection('servicos')">Serviços</a>
+      <a onclick="toggleSection('quemSomos')">Quem Somos</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Transforme sua presença online com sites profissionais!</h1>
+    <p>Descubra o poder de um site bem construído e aumente suas vendas hoje mesmo!</p>
+    <a href="/comprar" class="cta-button">COMPRE AGORA</a>
+
+    <div id="sobre" class="hidden">
+      <h2>Sobre Nós</h2>
+      <p>Somos especialistas em criar sites que convertem visitantes em clientes. Com anos de experiência no mercado digital, entendemos exatamente o que seu negócio precisa para se destacar online.</p>
+    </div>
+
+    <div id="servicos" class="hidden">
+      <h2>Nossos Serviços</h2>
+      <ul>
+        <li>Design responsivo e moderno</li>
+        <li>Otimização para mecanismos de busca (SEO)</li>
+        <li>Integração com redes sociais</li>
+        <li>Suporte técnico 24/7</li>
+      </ul>
+    </div>
+
+    <div id="quemSomos" class="hidden">
+      <h2>Quem Somos</h2>
+      <p>Uma equipe apaixonada por tecnologia e design, comprometida em entregar soluções web que impulsionam o sucesso dos nossos clientes. Nosso objetivo é tornar a web um lugar melhor, um site de cada vez.</p>
+    </div>
+
+    <h2>Sites Disponíveis</h2>
+    <div class="site-grid">
+      <div class="site-card">
+        <img alt="Screenshot de um site de e-commerce de moda, design minimalista com foco em imagens de produtos" src="/ecommerce-moda.jpg" width="250" height="150">
+        <h3>E-commerce de Moda</h3>
+        <p>Perfeito para lojas online de roupas e acessórios</p>
+        <span class="best-seller">Mais Vendido</span>
+      </div>
+      <div class="site-card">
+        <img alt="Screenshot de um site de restaurante com imagens de pratos gourmet e ambiente elegante" src="/restaurante.jpg" width="250" height="150">
+        <h3>Site para Restaurantes</h3>
+        <p>Ideal para apresentar seu menu e atrair mais clientes</p>
+      </div>
+      <div class="site-card">
+        <img alt="Screenshot de um site de blog de viagens com fotos de destinos exóticos e layout clean" src="/blog-viagens.jpg" width="250" height="150">
+        <h3>Blog de Viagens</h3>
+        <p>Compartilhe suas aventuras com o mundo</p>
+      </div>
+      <div class="site-card">
+        <img alt="Screenshot de um site de portfólio para fotógrafos com galeria de imagens em destaque" src="/portfolio-fotografo.jpg" width="250" height="150">
+        <h3>Portfólio de Fotógrafo</h3>
+        <p>Exiba seu trabalho com estilo e profissionalismo</p>
+        <span class="best-seller">Mais Vendido</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 SITE AQUI. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const clientNames = ['Maria', 'João', 'Ana', 'Carlos', 'Beatriz', 'Pedro', 'Luísa', 'Fernando'];
+    const clientTicker = document.getElementById('clientTicker');
+
+    function updateClientTicker() {
+      const randomName = clientNames[Math.floor(Math.random() * clientNames.length)];
+      clientTicker.textContent = `${randomName} acabou de comprar um site!`;
+      clientTicker.style.opacity = 1;
+
+      setTimeout(() => {
+        clientTicker.style.opacity = 0;
+      }, 2000);
+    }
+
+    setInterval(updateClientTicker, 4000);
+    updateClientTicker();
+
+    function toggleSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section.classList.contains('hidden')) {
+        section.classList.remove('hidden');
+      } else {
+        section.classList.add('hidden');
+      }
+    }
+  </script>
+</body></html>
